@@ -1,7 +1,7 @@
 About jupyterlab-topbar
 =======================
 
-Home: https://github.com/jtpio/jupyterlab-topbar.git
+Home: https://github.com/jupyterlab-contrib/jupyterlab-topbar.git
 
 Package license: BSD-3-Clause
 
@@ -36,6 +36,7 @@ Installing `jupyterlab-topbar` from the `conda-forge` channel can be achieved by
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `jupyterlab-topbar` can be installed with:
@@ -114,6 +115,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@fcollonval](https://github.com/fcollonval/)
 * [@jtpio](https://github.com/jtpio/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 
