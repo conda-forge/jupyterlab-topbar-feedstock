@@ -11,7 +11,7 @@ source:
   sha256: f1f9144fd09c29b8921f378662f26c65a460967d9c48eeea8018cea49626fb5f
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -33,7 +33,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/jtpio/jupyterlab-topbar.git
+  home: https://github.com/jupyterlab-contrib/jupyterlab-topbar.git
   summary: JupyterLab extension to expose the top bar space
   license: BSD-3-Clause
   license_file: LICENSE
@@ -42,3 +42,4 @@ extra:
   recipe-maintainers:
     - mariusvniekerk
     - jtpio
+    - fcollonval
