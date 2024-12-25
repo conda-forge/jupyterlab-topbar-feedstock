@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlab-topbar-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyterlab-topbar-{{ version }}.tar.gz
   sha256: f1f9144fd09c29b8921f378662f26c65a460967d9c48eeea8018cea49626fb5f
 
 build:
-  number: 2
+  number: 3
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,10 +19,10 @@ requirements:
   host:
     - jupyter-packaging >=0.7.9,<0.8.0
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - jupyterlab >=3.0.0,<4
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyterlab-contrib/jupyterlab-topbar.git
